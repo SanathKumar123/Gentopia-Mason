@@ -20,23 +20,23 @@ class PDFAnalyzer(BaseTool):
                 pdf_file = io.BytesIO(response.read())
                 reader = PdfReader(pdf_file)
                 
-                analysis = f"PDF Analysis for {pdf_source}:\n"
-                analysis += f"Total pages: {len(reader.pages)}\n\n"
+                analysis = "PDF Analysis for " + pdf_source + ":\n"
+                analysis += "Total pages: " + str(len(reader.pages)) + "\n\n"
 
                 if reader.metadata:
                     analysis += "Metadata:\n"
                     for key, value in reader.metadata.items():
-                        analysis += f"{key}: {value}\n"
+                        analysis += str(key) + ": " + str(value) + "\n"
                     analysis += "\n"
 
                 for i, page in enumerate(reader.pages[:3], 1):
                     text = page.extract_text()
-                    analysis += f"Page {i} preview:\n{text[:200]}...\n\n"
+                    analysis += "Page " + str(i) + " preview:\n" + text[:200] + "...\n\n"
 
                 return analysis
 
         except Exception as e:
-            return f"Error analyzing PDF: {str(e)}"
+            raise ValueError("Error analyzing PDF: " + str(e))
 
     async def _arun(self, *args: Any, **kwargs: Any) -> Any:
         raise NotImplementedError("Async not supported.")
