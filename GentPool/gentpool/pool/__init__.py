@@ -11,3 +11,10 @@ from .vanilla-ziyu import *
 from .scholar-ziyu import *
 from .old_agent import *
 from .pdf_agent import *
+from .scholar_agent import *
+from .wiki_agent import *
+from .price_agent import *
+from .boxoffice_agent import *
+from .weight_agent import *
+from .rotten_agent import *
+from .tep_scholar_agent import *

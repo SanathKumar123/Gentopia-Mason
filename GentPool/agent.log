@@ -1,73 +1,47 @@
-INFO:root:Creating Config from file: ./gentpool/pool/pdf_agent/agent.yaml
-INFO:root:Starting to load configuration from ./gentpool/pool/pdf_agent/agent.yaml
-INFO:root:Successfully loaded configuration from ./gentpool/pool/pdf_agent/agent.yaml
+INFO:root:Creating Config from file: ./gentpool/pool/tep_scholar_agent/agent.yaml
+INFO:root:Starting to load configuration from ./gentpool/pool/tep_scholar_agent/agent.yaml
+INFO:root:Successfully loaded configuration from ./gentpool/pool/tep_scholar_agent/agent.yaml
 INFO:root:--------------------
 INFO:root:[green]Welcome to Gentopia!
 INFO:root:--------------------
 INFO:root:[green]User: 
-INFO:root:pdf_agent is thinking...
+INFO:root:tep_scholar_agent is thinking...
 INFO:root:Done
-INFO:root:[blue]pdf_agent: 
-INFO:root:{"name":"pdf_analyzer", "arguments":{"pdf_source":"https://arxiv.org/pdf/2201.05966.pdf"}}
+INFO:root:[blue]tep_scholar_agent: 
+INFO:root:{"name":"google_search", "arguments":{
+  "query": "George Mason NLP group leader"
+}}
 
-INFO:root:Calling function: pdf_analyzer ...
+INFO:root:Calling function: google_search ...
 INFO:root:Done
 INFO:root:--------------------
-INFO:root:PDF Analysis for https://arxiv.org/pdf/2201.05966.pdf:
-Total pages: 30
+INFO:root:SearchResult(url=https://nlp.cs.gmu.edu/, title=George Mason NLP, description=The NLP group at George Mason Computer Science is interested in all aspects of NLP, with a focus on building tools for under-served languages.)
 
-Metadata:
-/Author: 
-/CreationDate: D:20221019003401Z
-/Creator: LaTeX with hyperref
-/Keywords: 
-/ModDate: D:20221019003401Z
-/PTEX.Fullbanner: This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2
-/Producer: pdfTeX-1.40.21
-/Subject: 
-/Title: 
-/Trapped: /False
+SearchResult(url=https://mainarke.github.io/ad/Fall22English.html, title=GMU-CS Recruitment Ad, description=The NLP group at GMU includes Dr. Antonios Anastasopoulos and Dr. Ziyu Yao from CS, as well as Dr. Marcos Zampieri, Dr. Kevin Lybarger, and Dr. Ozlem Uzuner ...)
 
-Page 1 preview:
-UNIFIED SKG: Unifying and Multi-Tasking Structured Knowledge
-Grounding with Text-to-Text Language Models
-Tianbao Xie1Chen Henry Wu2Peng Shi3Ruiqi Zhong4Torsten Scholak5
-Michihiro Yasunaga6Chien-Shen...
+SearchResult(url=https://n2c2.dbmi.hms.harvard.edu/2019-participate, title=How to Participate | National NLP Clinical Challenges (n2c2), description=Team Leaders must be faculty members (post-doc, research scientist, or professor). Teams consisting of solo students will not be approved. Visit the DBMI data ...)
 
-Page 2 preview:
-147Structured Knowledge Grounding
-knowledge graphs
-web tables/pages
-databases/apps
-Structured KnowledgeGreece held its last Summer Olympics in which year?Question AnsweringDescribe the table result.Da...
+SearchResult(url=https://www.linkedin.com/posts/j-p-singh-3213271_masons-ai-strategies-team-holds-inaugural-activity-7079490489636274177-6lF4, title=Mason's AI Strategies team holds inaugural summer institute, description=Inspiring to have Schar School's Distinguished Executive In-Residence Dr. David Bray organize this important executive education series as we ...)
 
-Page 3 preview:
-Task Family Task Knowledge Input User Input Output
-Semantic ParsingSpider (Yu et al., 2018) Database Question SQL
-GrailQA (Gu et al., 2021) Knowledge Graph Question s-Expression
-WebQSP (Yih et al., 20...
+SearchResult(url=https://www.mercatus.org/home, title=Mercatus Center: Home, description=The Mercatus Center is a research center at George Mason University that advances knowledge about how markets solve problems and help us lead happier, healthier ...)
 
+SearchResult(url=https://www.linkedin.com/in/sumanthmanduru, title=Sumanth Manduru - George Mason University, description=I have used LSTM Deep Learning Model as my base Model and acquired 94.71 Score on Leader Board. I have also tried, XGBoost, TF-IDF Dense Network but LSTM Model ...)
 
+SearchResult(url=https://littleyuyu.github.io/, title=Ziyu Yao's Personal Website, description=I am an Assistant Professor of the Department of Computer Science at George Mason University, where I co-lead the George Mason NLP group.)
+
+SearchResult(url=https://en.wikipedia.org/wiki/George_Mason, title=George Mason, description=George Mason (December 11, 1725 [OS November 30, 1725] – October 7, 1792) was an American planter, politician, Founding Father, and delegate to the US ...)
+
+SearchResult(url=https://www.cs.jhu.edu/research/language-speech-processing/, title=Natural Language Processing - Department of Computer ..., description=Researchers in the Natural Language Processing group work at the intersection of computer science, artificial intelligence, and computational linguistics.)
+
+SearchResult(url=https://clarivate.com/highly-cited-researchers/, title=Highly Cited Researchers, description=The Citation Laureates™ 2023 list has been announced, recognizing a select group ... George Mason University, George Washington University, Georgetown University ...)
 INFO:root:--------------------
-INFO:root:pdf_agent is thinking...
+INFO:root:tep_scholar_agent is thinking...
 INFO:root:Done
-INFO:root:[blue]pdf_agent: 
-INFO:root:The PDF titled "UNIFIED SKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models" discusses a framework for structured knowledge grounding using text-to-text language models. The authors propose a unified approach that integrates various tasks related to structured knowledge, such as semantic parsing and question answering, into a single model. 
-
-Key points include:
-
-1. **Unified Framework**: The paper introduces a multi-task learning framework that allows for the simultaneous handling of different structured knowledge tasks, improving efficiency and performance.
-
-2. **Task Integration**: It highlights the integration of various structured knowledge sources, including knowledge graphs, web tables, and databases, to enhance the model's understanding and response capabilities.
-
-3. **Model Architecture**: The authors detail the architecture of their proposed model, which leverages the capabilities of text-to-text language models to process and generate structured outputs.
-
-4. **Experiments and Results**: The paper presents experimental results demonstrating the effectiveness of the unified approach compared to traditional methods, showcasing improvements in accuracy and task performance.
-
-5. **Applications**: The framework has potential applications in areas such as question answering, semantic parsing, and other tasks that require structured knowledge understanding.
-
-Overall, the paper contributes to the field of natural language processing by proposing a novel method for grounding structured knowledge in a cohesive manner.
+INFO:root:[blue]tep_scholar_agent: 
+INFO:root:The leaders of the NLP group at George Mason University include Dr. Antonios Anastasopoulos, Dr. Ziyu Yao, Dr. Marcos Zampieri, Dr. Kevin Lybarger, and Dr. Ozlem Uzuner.
 INFO:root:Done
 INFO:root:[green]User: 
+INFO:root:
+[red]Bye!
 INFO:root:
 [red]Bye!
