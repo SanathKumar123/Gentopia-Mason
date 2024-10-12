@@ -1,5 +1,6 @@
-from rotten_tomatoes_client import RottenTomatoesClient
-from gentopia.tools import BaseTool, Optional, Type, AnyStr, Any
+import requests
+from typing import Optional, Any
+from gentopia.tools import BaseTool, Type, AnyStr
 from pydantic import BaseModel, Field
 
 class RottenTomatoesSearchArgs(BaseModel):
@@ -15,14 +16,20 @@ class RottenTomatoesSearch(BaseTool):
     args_schema: Optional[Type[BaseModel]] = RottenTomatoesSearchArgs
     
     def _run(self, query: AnyStr) -> str:
-        results = RottenTomatoesClient.search(term=query, limit=5)
+        rotten_tomatoes_client = f"https://api.rottentomatoes.com/api/public/v1.0/movies.json?q={query}&page_limit=5&apiKey=YOUR_API_KEY"
+        
+        response = requests.get(rotten_tomatoes_client)
+        if response.status_code != 200:
+            return "Error fetching results."
+        
+        results = response.json()
         
         output = []
         for category in ['movies', 'tvSeries', 'franchises']:
             if category in results and results[category]:
                 output.append(f"{category.capitalize()}:")
                 for item in results[category]:
-                    output.append(f"- {item['name']} ({item.get('year', 'N/A')})")
+                    output.append(f"- {item['title']} ({item.get('year', 'N/A')})")
                 output.append("")
         
         return '\n'.join(output) if output else "No results found."
